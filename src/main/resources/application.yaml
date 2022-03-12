@@ -1,0 +1,15 @@
+
+  spring:
+    liquibase:
+      enabled: false
+    datasource:
+      url: jdbc:h2:file:./db
+      username: pass
+      password: pass
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+        ddl-auto: create
+    h2:
+      console:
+        enabled: true
