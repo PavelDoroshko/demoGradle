@@ -1,0 +1,1 @@
+UPDATE person SET sur_name='sasha' WHERE id =1;

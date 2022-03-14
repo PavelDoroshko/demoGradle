@@ -1,0 +1,1 @@
+ALTER TABLE person ADD COLUMN sur_name varchar(20);
