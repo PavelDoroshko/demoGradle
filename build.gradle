@@ -28,6 +28,8 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     runtimeOnly 'com.h2database:h2'
     implementation group: 'org.flywaydb', name: 'flyway-core', version: '8.5.2'
+    implementation 'org.postgresql:postgresql:42.3.3'
+
 }
 
 //jar {
