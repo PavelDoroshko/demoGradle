@@ -1,15 +1,35 @@
 
-  spring:
-    liquibase:
-      enabled: false
-    datasource:
-      url: jdbc:h2:file:./db
-      username: pass
-      password: pass
-    jpa:
-      database-platform: org.hibernate.dialect.H2Dialect
+#  spring:
+#    flyway:
+#      user: pass
+#      password: pass
+#      url: jdbc:h2:file:./db
+#      driver-class-name: org.h2.Driver
+##    datasource:
+##      url: jdbc:h2:file:./db
+##      username: pass
+##      password: pass
+##    jpa:
+##      database-platform: org.hibernate.dialect.H2Dialect
+##      hibernate:
+##        ddl-auto: none
+##    h2:
+##      console:
+##        enabled: true
+ spring:
+  flyway:
+    user: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://db:5432/tdb
+    baseline-on-migrate: true
+  jpa:
       hibernate:
-        ddl-auto: create
-    h2:
-      console:
-        enabled: true
+        ddl-auto: none
+      show-sql: true
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+      url: jdbc:postgresql://db:5432/tdb
+      driver-class-name: org.postgresql.Driver
+      username: postgres
+      password: postgres
